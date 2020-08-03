@@ -1,3 +1,4 @@
 *.swp
 myenv
 o_err
+__pychache__/

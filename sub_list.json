@@ -6,5 +6,9 @@
     {
         "name": "Joe Schmoe",
         "email": "fake_email2@yahoo.com"
+    },
+    {
+        "name": "James Lee Howard",
+        "email": "fake_email3@yahoo.com"
     }
 ]
