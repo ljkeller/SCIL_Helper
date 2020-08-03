@@ -1,9 +1,11 @@
 import json
 
-def read_names(fptr):
+def email_map_from_file(fptr):
+    d_map = dict()
     with open(fptr) as f:
         data = json.load(f)
-        return data
+        for entry in data:
+            d_map[entry['email']] = entry['name']
+        return d_map
 
-d = read_names('sub_list.json')
-print(d)
+d = email_map_from_file('sub_list.json')
