@@ -19,16 +19,21 @@ def ret_inmates(driver):
         inmates.add(row.find_element_by_class_name('inmate').text)
     return inmates
 
-def main():
-    print("[Loading " + SCIL_URL + date +  "]")
-
+def setup_driver():
     chr_options = ChromeOptions()
     chr_options.add_argument('--headless')
     chr_options.add_argument('window-size=1400,1000')
+
     driver = webdriver.Chrome(options=chr_options)
     driver.get(SCIL_URL+date)
-
     sleep(1)
+    return driver
+
+
+def main():
+    print("[Loading " + SCIL_URL + date +  "]")
+
+    driver = setup_driver()
     assert "Scott County, Iowa" in driver.title
 
     print('[Finding inmates]')
