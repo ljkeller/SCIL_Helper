@@ -1,4 +1,5 @@
 *.swp
 myenv
 o_err
-___pycache__/
+__pycache__/
+*.pyc
